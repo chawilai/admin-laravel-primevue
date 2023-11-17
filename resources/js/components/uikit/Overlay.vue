@@ -79,7 +79,7 @@ const confirm = (event) => {
             <div class="card p-fluid">
                 <h5>Dialog</h5>
                 <Dialog header="Dialog" v-model:visible="display" :breakpoints="{ '960px': '75vw' }" :style="{ width: '30vw' }" :modal="true">
-                    <p class="line-height-3 m-0">
+                    <p class="m-0 line-height-3">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p>
@@ -105,7 +105,7 @@ const confirm = (event) => {
                                 <Column field="name" header="Name" :sortable="true" headerStyle="min-width:12rem;"></Column>
                                 <Column header="Image" headerStyle="min-width:5rem;">
                                     <template #body="slotProps">
-                                        <img :src="'demo/images/product/' + slotProps.data.image" :alt="slotProps.data.image" width="50" class="shadow-2" />
+                                        <img :src="'../../../../demo/images/product/' + slotProps.data.image" :alt="slotProps.data.image" width="50" class="shadow-2" />
                                     </template>
                                 </Column>
                                 <Column field="price" header="Price" :sortable="true" headerStyle="min-width:8rem;">
@@ -125,7 +125,7 @@ const confirm = (event) => {
                 <Button label="Delete" icon="pi pi-trash" class="p-button-danger" style="width: auto" @click="openConfirmation" />
                 <Dialog header="Confirmation" v-model:visible="displayConfirmation" :style="{ width: '350px' }" :modal="true">
                     <div class="flex align-items-center justify-content-center">
-                        <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
+                        <i class="mr-3 pi pi-exclamation-triangle" style="font-size: 2rem" />
                         <span>Are you sure you want to proceed?</span>
                     </div>
                     <template #footer>
